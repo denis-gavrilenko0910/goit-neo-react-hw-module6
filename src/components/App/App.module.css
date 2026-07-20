@@ -1,0 +1,43 @@
+.app {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 76px 30px 110px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-radius: 46px;
+  background-color: #f8fafc;
+  scrollbar-width: none;
+}
+
+.app::-webkit-scrollbar {
+  display: none;
+}
+
+
+/*
+  В App больше НЕТ ни Dynamic Island,
+  ни Home Indicator.
+*/
+
+.app::before,
+.app::after {
+  content: none !important;
+  display: none !important;
+}
+
+.app h1 {
+  margin: 0 0 28px;
+  color: #111827;
+  font-size: 34px;
+  line-height: 1.1;
+}
+
+.app h2 {
+  margin: 36px 0 20px;
+  color: #111827;
+  font-size: 26px;
+  line-height: 1.2;
+}

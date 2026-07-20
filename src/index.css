@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #1f2937;
+  background-color: #f3f4f6;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+
+/* Корпус телефона */
+
+.phoneShell {
+  position: relative;
+  width: 430px;
+  height: 880px;
+  margin: 40px auto;
+  padding: 11px;
+  border: 1px solid #090a0b;
+  border-radius: 62px;
+  background: linear-gradient(145deg, #696a6e 0%, #3f4044 8%, #1d1e20 22%, #0d0e0f 45%, #202124 65%, #515257 84%, #18191b 100%);
+  box-shadow: 0 45px 80px rgba(15, 23, 42, 0.3), 0 18px 35px rgba(0, 0, 0, 0.25), inset 2px 2px 3px rgba(255, 255, 255, 0.28), inset -2px -2px 4px rgba(0, 0, 0, 0.8), inset 0 0 0 2px rgba(0, 0, 0, 0.7);
+}
+
+
+/* Экран */
+
+.phoneShell > main {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
+/* Dynamic Island */
+
+.dynamicIsland {
+  position: absolute;
+  z-index: 110;
+  top: 35px;
+  left: 50%;
+  width: 126px;
+  height: 30px;
+  border-radius: 999px;
+  background-color: #050505;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+
+/* Общие стили физических кнопок */
+
+.actionButton,
+.volumeUp,
+.volumeDown,
+.powerButton {
+  position: absolute;
+  z-index: 10;
+  width: 7px;
+  border: 1px solid #090a0b;
+  background: linear-gradient(90deg, #151618 0%, #4d4e52 45%, #202124 100%);
+  box-shadow: inset 1px 0 1px rgba(255, 255, 255, 0.18), 1px 2px 3px rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+}
+
+
+/* Action Button */
+
+.actionButton {
+  top: 150px;
+  left: -6px;
+  height: 34px;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+}
+
+
+/* Volume Up */
+
+.volumeUp {
+  top: 218px;
+  left: -6px;
+  height: 62px;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+}
+
+
+/* Volume Down */
+
+.volumeDown {
+  top: 295px;
+  left: -6px;
+  height: 62px;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+}
+
+
+/* Power Button */
+
+.powerButton {
+  top: 220px;
+  right: -6px;
+  height: 95px;
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+}
+
+
+/* Нижний fade + Home Indicator */
+
+.phoneShell::after {
+  content: "";
+  position: absolute;
+  z-index: 90;
+  right: 11px;
+  bottom: 11px;
+  left: 11px;
+  height: 96px;
+  border-radius: 0 0 50px 50px;
+  pointer-events: none;
+  background:
+    /* Fade */
+    linear-gradient(to bottom, rgba(248, 250, 252, 0) 0%, rgba(248, 250, 252, 0.2) 25%, rgba(248, 250, 252, 0.65) 50%, rgba(248, 250, 252, 0.95) 75%, #f8fafc 100%);
+}
+
+.homeIndicator {
+  position: absolute;
+  z-index: 110;
+  bottom: 19px;
+  left: 50%;
+  width: 135px;
+  height: 5px;
+  border-radius: 999px;
+  background-color: #111111;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
