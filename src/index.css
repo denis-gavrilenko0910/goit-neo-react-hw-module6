@@ -12,6 +12,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  padding: 50px 0;
 }
 
 button,
@@ -34,7 +35,7 @@ button {
   position: relative;
   width: 430px;
   height: 880px;
-  margin: 40px auto;
+  margin: 0 auto;
   padding: 11px;
   border: 1px solid #090a0b;
   border-radius: 62px;
